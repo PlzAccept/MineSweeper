@@ -1,0 +1,17 @@
+<project name="MineSweeper" default="jar" basedir=".">
+
+	<target name="compile">
+		<javac srcdir="src" destdir="classes" includes="**" debug="on">
+		</javac>
+	</target> 
+
+
+	<target name="jar" depends="compile">
+		<jar jarfile="mine.jar" basedir="classes">
+			<manifest>
+				<attribute name="Main-Class" value="edu.hpu.jxu.mine.MineSweeper"/>
+			</manifest>
+		</jar>
+	</target>
+
+</project>
